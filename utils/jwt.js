@@ -9,6 +9,8 @@ export const verifyToken=(token)=>{
         const decoded = jwt.verify(token,process.env.JWT_SECRET);
         return decoded;
     } catch (error) {
-        throw new Error("Invalid token");
+         return res.status(401).json({
+            message: "Invalid or expired token"
+        });
     }
 }
