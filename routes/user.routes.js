@@ -5,6 +5,6 @@ import { verifyAuth } from "../middlewares/verifyAuth.js";
 const userRouter = Router();
 
 userRouter.post('/signup', signUp);
-userRouter.post('/login', verifyAuth, login);
+userRouter.post('/login',login);
 
 export default userRouter;
